@@ -15,11 +15,11 @@ between CSV-type data files, or for other similar purposes.
 # Usage
 
 ```python
-    >>>import string_set_matcher as ssm
+>>>import string_set_matcher as ssm
 ```
 #### match
 ```python
-    >>>ssm.match(frm, onto)
+>>>ssm.match(frm, onto)
 ```
 where `frm` and `onto` are strictly lists of python strings.
 
