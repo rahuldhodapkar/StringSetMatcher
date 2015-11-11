@@ -23,10 +23,16 @@ def score_set_match(frm, onto):
 #
 # which will allow the calling program to determine what to do.
 def map_string_sets(frm, onto):
-    perm_gen = itertools.permutations(frm)
-    for perm in perm_gen:
-        print score_set_match(perm, onto)
-        print str(perm) + " -> " + str(onto);
+    mapped_scores = []
 
-map_string_sets(['name', 'change', 'depth'], ['full name', 'change type', 'deepness'])
+    perm_gen = itertools.permutations(frm)
+    perm_idx = itertools.permutations(range(len(frm)))
+    for perm, ix in itertools.izip(perm_gen, perm_idx):
+        ix_mapping = map(lambda x: ix.index(x), range(len(ix)))
+        mapped_scores.append( (ix_mapping, score_set_match(perm, onto) ) )
+
+    mapped_scores.sort(key=lambda x: -x[1])
+    return mapped_scores
+
+print map_string_sets(['name', 'change', 'depth'], ['full name', 'change type', 'deepness'])
 
