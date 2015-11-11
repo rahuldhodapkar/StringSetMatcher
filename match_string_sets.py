@@ -46,7 +46,7 @@ def map_string_sets(frm, onto):
 
     for perm, ix in itertools.izip(perm_gen, perm_idx):
         ix_mapping = map(lambda x: ix.index(x), range(len(ix)))
-        mapped_scores.append( (ix_mapping[:orig_frm_len] , score_set_match(perm, onto) ) )
+        mapped_scores.append( (ix_mapping[:orig_frm_len], score_set_match(perm, onto)) )
 
     mapped_scores.sort(key=lambda x: -x[1])
     return mapped_scores
