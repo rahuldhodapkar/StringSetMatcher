@@ -4,3 +4,7 @@
 
 # compiler artifacts
 *.pyc
+
+# distutils artifact
+MANIFEST
+dist/*
