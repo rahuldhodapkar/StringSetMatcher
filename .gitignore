@@ -1,4 +1,6 @@
 # editor artifacts
-
 *.swp
 *.swo
+
+# compiler artifacts
+*.pyc

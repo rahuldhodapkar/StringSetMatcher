@@ -26,7 +26,7 @@ def score_set_match(frm, onto):
 #    [ (mapping, score) ]
 #
 # which will allow the calling program to determine what to do.
-def map_string_sets(frm, onto):
+def match(frm, onto):
     mapped_scores = []
 
     orig_frm_len = len(frm)
@@ -50,6 +50,4 @@ def map_string_sets(frm, onto):
 
     mapped_scores.sort(key=lambda x: -x[1])
     return mapped_scores
-
-print map_string_sets(['name', 'change'], ['full name', 'change type', 'deepness'])
 

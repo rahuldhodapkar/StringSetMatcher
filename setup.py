@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'string_set_matcher',
   packages = ['string_set_matcher'],
-  version = '0.1',
+  version = '0.1.0',
   description = 'determine a best fuzzy match between sets of strings',
   author = 'Rahul Dhodapkar',
   author_email ='rahul.m.dhodapkar@gmail.com',
