@@ -8,6 +8,10 @@ between CSV-type data files, or for other similar purposes.
 
 - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)
 
+# Installation
+
+    pip install string_set_matcher
+
 # Usage
 
 ```python
